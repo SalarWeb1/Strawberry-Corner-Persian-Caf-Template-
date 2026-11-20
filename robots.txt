@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# قالب گوشه توت‌فرنگی — طراحی و توسعه: SalarWeb
+Sitemap: https://salarweb.ir/strawberry-corner-cafe/sitemap.xml

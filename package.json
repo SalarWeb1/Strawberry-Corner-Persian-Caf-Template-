@@ -1,0 +1,42 @@
+{
+  "name": "strawberry-corner-cafe",
+  "version": "3.0.0",
+  "description": "Strawberry Corner — a complete 30-page Persian (RTL) café template built with plain HTML, CSS and vanilla JS. GSAP animations, Jalali calendar, offline-ready.",
+  "keywords": [
+    "persian",
+    "farsi",
+    "rtl",
+    "cafe",
+    "coffee-shop",
+    "template",
+    "html",
+    "css",
+    "vanilla-js",
+    "gsap",
+    "jalali-calendar",
+    "offline"
+  ],
+  "homepage": "https://github.com/salarweb/strawberry-corner-cafe",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/salarweb/strawberry-corner-cafe.git"
+  },
+  "bugs": {
+    "url": "https://github.com/salarweb/strawberry-corner-cafe/issues"
+  },
+  "author": "SalarWeb (https://salarweb.ir)",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "python3 -m http.server 8000",
+    "serve": "python3 -m http.server 8000",
+    "build": "python3 build.py && python3 make_data_js.py",
+    "check:js": "node --check js/app.js && node --check js/motion.js && node --check js/data.js"
+  },
+  "browserslist": [
+    "Chrome >= 90",
+    "Firefox >= 90",
+    "Safari >= 15",
+    "Edge >= 90"
+  ]
+}

@@ -1,0 +1,27 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.idea/
+.vscode/
+*.sublime-*
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Node (optional tooling)
+node_modules/
+npm-debug.log*
+
+# Build / dist
+dist/
+build/
+*.zip
+
+# Local preview artifacts
+screenshots-local/
+.playwright/
