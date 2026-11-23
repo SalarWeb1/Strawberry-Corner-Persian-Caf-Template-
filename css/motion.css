@@ -1,0 +1,57 @@
+/* ============================================================
+   گوشه توت‌فرنگی — لایه‌ی موشن (اختیاری، فقط زیبایی)
+   ============================================================ */
+
+/* ---------- پرده معرفی ---------- */
+#sc-intro{position:fixed;inset:0;z-index:400;display:grid;place-items:center;
+  background:radial-gradient(circle at 50% 40%,#FFF6E8 0%,#FBEEDB 55%,#F6E3C9 100%);overflow:hidden}
+#sc-intro .intro-inner{text-align:center;position:relative}
+#sc-intro .intro-art{width:132px;height:132px;margin:0 auto 18px;display:block;
+  filter:drop-shadow(0 14px 22px rgba(160,60,60,.18))}
+#sc-intro .intro-name{font-family:var(--display);font-size:52px;color:var(--red);
+  line-height:1.6;margin:0}
+#sc-intro .intro-sub{font-family:var(--body);font-size:13px;letter-spacing:.32em;
+  color:var(--ink-soft);margin-top:10px;text-transform:uppercase}
+#sc-intro .intro-line{width:180px;height:2px;background:rgba(190,120,110,.22);
+  margin:26px auto 0;border-radius:2px;overflow:hidden}
+#sc-intro .intro-line i{display:block;height:100%;width:0%;background:var(--red);border-radius:2px}
+#sc-intro .intro-dot{position:absolute;border-radius:50%;pointer-events:none}
+#sc-intro.done{display:none}
+
+/* ---------- ترنزیشن بین صفحه‌ها ---------- */
+#sc-sweep{position:fixed;inset:0;z-index:300;pointer-events:none;display:none;
+  background:linear-gradient(100deg,var(--red) 0%,#D6384A 45%,var(--red-2) 100%);
+  transform:translateX(-100%)}
+#sc-sweep::after{content:'';position:absolute;top:0;bottom:0;left:-40px;width:80px;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.35));filter:blur(6px)}
+#sc-sweep .sweep-berry{position:absolute;top:50%;left:50%;width:78px;height:78px;
+  transform:translate(-50%,-50%);opacity:0}
+
+/* ---------- نشانگر ماوس ---------- */
+#sc-cursor{position:fixed;top:0;left:0;width:26px;height:26px;border-radius:50%;
+  border:1.5px solid rgba(214,56,74,.55);pointer-events:none;z-index:390;
+  transform:translate(-50%,-50%);mix-blend-mode:multiply;opacity:0;
+  transition:width .25s,height .25s,background .25s,border-color .25s}
+#sc-cursor.on{opacity:1}
+#sc-cursor.grow{width:54px;height:54px;background:rgba(214,56,74,.1);border-color:rgba(214,56,74,.35)}
+#sc-cursor-core{position:fixed;top:0;left:0;width:6px;height:6px;border-radius:50%;
+  background:var(--red);pointer-events:none;z-index:391;transform:translate(-50%,-50%);opacity:0}
+#sc-cursor-core.on{opacity:.9}
+@media (hover:none),(max-width:860px){#sc-cursor,#sc-cursor-core{display:none}}
+
+/* ---------- گلبرگ‌های شناور ---------- */
+#sc-petals{position:fixed;inset:0;pointer-events:none;z-index:5;overflow:hidden}
+#sc-petals span{position:absolute;top:-40px;display:block;opacity:0}
+#sc-petals svg{width:100%;height:100%}
+
+/* ---------- عناصر آماده‌ی ریویل ---------- */
+.reveal-ready{opacity:0}
+
+/* ---------- ریزجزئیات ---------- */
+.menu-item,.polaroid,.article-card,.mini-item,.good-item{will-change:transform;transform-style:preserve-3d}
+.btn-red,.btn-primary,.add-btn,.size-opt,.filter-pill{will-change:transform}
+
+/* تیغه‌ی نوری روی کارت‌ها */
+.menu-item,.polaroid{position:relative;overflow:hidden}
+.menu-item .shine,.polaroid .shine{position:absolute;inset:0;pointer-events:none;opacity:0;
+  background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,.55) 48%,transparent 66%)}
